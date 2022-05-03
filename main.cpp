@@ -22,30 +22,19 @@ int main() {
         a = b = largestSquare(number);
         c = number - a * a;
 
-        // It doesn't work on number 3 so I fixed it
-        if (number == 3)
-        {
-            a = 1;
-            b = 3;
-
-            Output(number, a, b);
-
-            continue;
-        }
-
-        if (a * a + a == number)
-        {
-            Output(number, a, a + 1);
-            continue;
-        }
-
-        while (c)
-        {
-            --a;
-            c += b;
+        if (a) {
             d = c / a;
             c -= d * a;
             b += d;
+
+            while (c)
+            {
+                --a;
+                c += b;
+                d = c / a;
+                c -= d * a;
+                b += d;
+            }
         }
 
         Output(number, a, b);
