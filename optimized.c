@@ -1,6 +1,4 @@
-#include <iostream>
-
-#define Output(number, x, y) std::cout << "Number: " << number << "\nFirst Factor: " << x << "\nSecond Factor: " << y << "\n\n";
+#include <stdio.h> 
 
 int main() {
     int a, b, c, d;
@@ -30,6 +28,8 @@ int main() {
             }
         }
 
-        Output(number, a, b);
+        printf("Number: %d\n", number);
+        printf("First Factor: %d\n", a);
+        printf("Second Factor: %d\n\n", b);
     }
 }
