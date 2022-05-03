@@ -4,14 +4,14 @@ int main() {
     int a, b, c, d;
     a = b = c = d = 0;
 
-    for (int number = 0; number < 100000; number++)
+    for (int i = 0; i < 100000; i++)
     {
-        while ((a + 1) * (a + 1) <= number) {
+        while ((a + 1) * (a + 1) <= i) {
             ++a;
         }
 
         b = a;
-        c = number - a * a;
+        c = i - a * a;
 
         if (a) {
             d = c / a;
@@ -28,7 +28,7 @@ int main() {
             }
         }
 
-        printf("Number: %d\n", number);
+        printf("Number: %d\n", i);
         printf("First Factor: %d\n", a);
         printf("Second Factor: %d\n\n", b);
     }
